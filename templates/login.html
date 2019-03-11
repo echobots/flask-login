@@ -15,32 +15,12 @@
     {% endif %}
   </head>
   <body>
-  	<table class="table">
-	  <thead class="thead-dark">
-	    <tr>
-	      <th scope="col">#</th>
-	      <th scope="col">Title</th>
-	      <th scope="col">Body</th>
-	      <th scope="col">Action</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    {% for item in data %}
-	    <tr>
-	      <th scope="row">{{item[0]}}</th>
-	      <td>{{item[1]}}</td>
-	      <td>{{item[2]}}</td>
-	      <td><a href="">edit</a> | <a href="">delete</a></td>
-	    </tr>
-	    {% endfor %}
-	  </tbody>
-	</table>
-
-	{% block content %}{% endblock %}
-
-	<a href="/" style="margin: 0 0 0 10px;">
-		<input type="button" name="news" value="balik bang">
-	</a>
+  	<br>
+  	<form action="." method="POST" style="margin: 0 0 0 10px;">
+      <input type="text" name="username" placeholder="username">
+  		<input type="password" name="password" placeholder="password">
+  		<input type="submit" name="submit">
+  	</form>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

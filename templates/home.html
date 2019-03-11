@@ -8,19 +8,26 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-    <title>Input!</title>
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>ECHOBOTS</title>
+    {% endif %}
   </head>
   <body>
+    <br>
+    <h3>{ini_user} - {login_time_12}</h3>
   	<br>
   	<form action="." method="POST" style="margin: 0 0 0 10px;">
-		<input type="input" name="title">
-		<input type="input" name="body">
-		<input type="submit" name="submit">
-	</form>
+  		<input type="input" name="title" placeholder="title">
+  		<input type="input" name="body" placeholder="body">
+  		<input type="submit" name="submit">
+  	</form>
 	<br>
-	<a href="/news" style="margin: 0 0 0 10px;">
-		<input type="button" name="news" value="liat datanya bang">
-	</a>
+	<div style="margin: 0 0 0 10px;">
+		<input type="button" onclick="location.href='/news';" value="liat datanya bang">
+    <input type="button" onclick="location.href='/dropsession';" value="Log out">
+	</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
